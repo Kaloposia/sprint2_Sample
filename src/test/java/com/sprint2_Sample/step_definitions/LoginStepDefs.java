@@ -23,6 +23,9 @@ public class LoginStepDefs {
     public void the_user_logged_in_with_username_as_and_password_as(String userName, String password) {
         loginPage.userName.sendKeys(ConfigurationReader.getProperty("hr_username"));
         loginPage.password.sendKeys(ConfigurationReader.getProperty("hr_password"));
+        loginPage.submit.click();
+
+
     }
 
 }

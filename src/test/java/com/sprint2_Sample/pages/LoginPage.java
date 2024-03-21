@@ -1,7 +1,9 @@
 package com.sprint2_Sample.pages;
 
 
-import com.fleet.utilities.Driver;
+import com.sprint2_Sample.utilities.ConfigurationReader;
+import com.sprint2_Sample.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,15 +14,15 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id="prependedInput")
+    @FindBy(name="USER_LOGIN")
     public WebElement userName;
 
 
 
-    @FindBy(id="prependedInput2")
+    @FindBy(name="USER_PASSWORD")
     public WebElement password;
 
-    @FindBy(name = "_submit")
+    @FindBy(xpath = "//input[@type='submit']")
     public WebElement submit;
 
 
